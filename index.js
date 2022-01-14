@@ -8,6 +8,8 @@ client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 let PlayerCount = require('./server/players');
 
+client.login(process.env.TOKEN);
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
     
